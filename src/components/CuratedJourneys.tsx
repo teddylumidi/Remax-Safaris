@@ -51,8 +51,7 @@ const JOURNEYS: JourneyItem[] = [
     image: '/images/global_luxury_travel.jpg',
     galleryImages: [
       '/images/global_luxury_travel.jpg',
-      '/images/capetown_table_mountain.jpg',
-      '/images/capetown_camps_bay.jpg'
+      '/images/capetown_table_mountain.jpg'
     ],
     description: 'Curated international luxury packages featuring 5-star private suites, desert dune retreats, wineland tastings, and seamless VIP travel logistics.',
     highlights: ['Fast-track visa processing', '5-star boutique accommodations', 'Chauffeured private transfers']
@@ -113,8 +112,7 @@ const JOURNEYS: JourneyItem[] = [
     priceUsd: 1380,
     image: '/images/capetown_table_mountain.jpg',
     galleryImages: [
-      '/images/capetown_table_mountain.jpg',
-      '/images/capetown_camps_bay.jpg'
+      '/images/capetown_table_mountain.jpg'
     ],
     description: 'Panoramic summit cables up Table Mountain, private Franschhoek vineyard tastings, Boulders Beach penguin sanctuaries, and Atlantic oceanfront dining.',
     highlights: ['Table Mountain cableway pass', 'Cape Peninsula scenic drive', 'Exclusive Stellenbosch wine cellar tours']

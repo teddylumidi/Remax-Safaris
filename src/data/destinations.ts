@@ -244,7 +244,7 @@ export const DESTINATIONS: Destination[] = [
     experienceType: 'Nature',
     tagline: 'Machakos People’s Park, Lukenya Hills & scenic ridge adventures',
     description: 'Surrounded by picturesque Akamba hills, Machakos offers adventure rock climbing at Lukenya, zip-lining, family park leisure, and vibrant hill hikes.',
-    image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=70&auto=format',
+    image: 'https://images.unsplash.com/photo-1535338881181-3646e5ab2ee2?auto=format&fit=crop&w=800&q=70&auto=format',
     highlights: ['Machakos People’s Park', 'Lukenya Hills Rock Climbing', 'Iveti Hills Scenic View', 'Katani Adventure Trails'],
     bestTimeToVisit: 'All year round',
     popularActivities: ['Rock Climbing', 'Park Leisure', 'Hiking', 'Ziplining'],
@@ -327,8 +327,7 @@ export const DESTINATIONS: Destination[] = [
     description: 'South Africa’s Mother City where dramatic mountains meet two oceans. Experience Cableway rides up Table Mountain, Camps Bay beaches, Cape Peninsula drives, and penguin encounters.',
     image: '/images/capetown_table_mountain.jpg',
     galleryImages: [
-      '/images/capetown_table_mountain.jpg',
-      '/images/capetown_camps_bay.jpg'
+      '/images/capetown_table_mountain.jpg'
     ],
     highlights: ['Table Mountain Aerial Cableway & Summit View', 'Camps Bay & Twelve Apostles Coastline', 'Boulders Beach African Penguins'],
     bestTimeToVisit: 'November to March',
@@ -496,8 +495,7 @@ export const DESTINATIONS: Destination[] = [
     description: 'An enchanted tropical island off Tanzania’s coast. Swim up-close with green sea turtles in Nungwi Baraka Natural Aquarium, sail traditional wooden dhows over clear turquoise waters, tour organic spice farms, and wander historic Stone Town alleys.',
     image: '/images/zanzibar_turtle_aquarium.jpg',
     galleryImages: [
-      '/images/zanzibar_turtle_aquarium.jpg',
-      '/images/zanzibar_turtle_closeup.jpg'
+      '/images/zanzibar_turtle_aquarium.jpg'
     ],
     highlights: ['Nungwi Baraka Sea Turtle Swimming', 'Traditional Dhow Safari Blue Cruise', 'Stone Town UNESCO Tour'],
     bestTimeToVisit: 'June to October & December to February',

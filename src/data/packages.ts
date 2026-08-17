@@ -323,8 +323,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     badge: 'Island & Turtle Sanctuary',
     image: '/images/zanzibar_turtle_aquarium.jpg',
     galleryImages: [
-      '/images/zanzibar_turtle_aquarium.jpg',
-      '/images/zanzibar_turtle_closeup.jpg'
+      '/images/zanzibar_turtle_aquarium.jpg'
     ],
     inclusions: [
       '3 Nights in Kendwa beachfront resort',
@@ -375,8 +374,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     badge: 'African Jewel',
     image: '/images/capetown_table_mountain.jpg',
     galleryImages: [
-      '/images/capetown_table_mountain.jpg',
-      '/images/capetown_camps_bay.jpg'
+      '/images/capetown_table_mountain.jpg'
     ],
     inclusions: [
       '4 Nights accommodation in 4-star Cape Town seafront hotel',
