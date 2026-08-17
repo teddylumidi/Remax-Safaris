@@ -1,0 +1,216 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #FDFBF7;
+    color: #1A2621;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  body.dark {
+    background-color: #0A120E;
+    color: #F0F4F2;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    letter-spacing: 0.02em;
+  }
+
+  .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Sirikoi Design Token Variables */
+:root {
+  --safari-cream: #FAF6F0;
+  --safari-cream-dark: #E9E5E1;
+  --safari-terracotta: #C88A4B;
+  --safari-dark-green: #12231A;
+  --safari-border: #E8E2D6;
+}
+
+.bg-safari-cream {
+  background-color: #FAF6F0;
+}
+
+.bg-safari-green {
+  background-color: #12231A;
+}
+
+.bg-safari-gold {
+  background-color: #C88A4B;
+}
+
+.text-safari-gold {
+  color: #C88A4B;
+}
+
+/* 1. Cinematic Background Video Canvas (Sirikoi Architecture) */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('/images/luxury_safari_hero_sirikoi.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Sirikoi Button Styling */
+.sirikoi-button {
+  display: inline-block;
+  padding: 10px 28px;
+  background-color: #C88A4B;
+  color: #FFFFFF;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(200, 138, 75, 0.2);
+}
+
+.sirikoi-button:hover {
+  background-color: #b57a3e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(200, 138, 75, 0.3);
+}
+
+.sirikoi-button.outline {
+  background-color: transparent;
+  color: #C88A4B;
+  border: 1px solid #C88A4B;
+}
+
+.sirikoi-button.outline:hover {
+  background-color: #C88A4B;
+  color: #FFFFFF;
+}
+
+/* Sirikoi Section Headings */
+.sirikoi-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sirikoi-heading .sub {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #C88A4B;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.sirikoi-heading h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #12231A;
+  line-height: 1.2;
+}
+
+.dark .sirikoi-heading h2 {
+  color: #FDFBF7;
+}
+
+@media (max-width: 768px) {
+  .sirikoi-heading h2 {
+    font-size: 1.85rem;
+  }
+}
+
+/* 2. Responsive Video Display across all devices */
+@media (max-width: 768px) {
+  .hero-container {
+    background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+}
+
+/* 3. Luxury Video Preloader & Scroll Down Indicator Keyframes */
+@keyframes scrollBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(8px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes spinnerRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-scroll-bounce {
+  animation: scrollBounce 2.2s infinite ease-in-out;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+.animate-spin-slow {
+  animation: spinnerRotate 3s linear infinite;
+}
+
+/* Mobile-First Safe Scrolling and Touch Targets */
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 640px) {
+  .sirikoi-button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 22px;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+}
+
+
+

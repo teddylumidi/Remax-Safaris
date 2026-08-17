@@ -1,0 +1,6 @@
+{
+  "name": "Remax Safaris - Tours & Travel",
+  "description": "Book luxury Kenya safaris, international holiday packages, visa processing, flight ticketing, and transfers with Remax Safaris.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

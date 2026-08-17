@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "reviews": {
+      "title": "Customer Reviews",
+      "description": "Reviews submitted by authenticated Google users for Remax Safaris",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Auth UID of the reviewer"
+        },
+        "userName": {
+          "type": "string",
+          "description": "Display name of the Google account holder"
+        },
+        "userPhoto": {
+          "type": "string",
+          "description": "Profile picture URL from Google account"
+        },
+        "rating": {
+          "type": "number",
+          "description": "Star rating from 1 to 5"
+        },
+        "title": {
+          "type": "string",
+          "description": "Brief headline summary of the review"
+        },
+        "comment": {
+          "type": "string",
+          "description": "Detailed review narrative"
+        },
+        "packageName": {
+          "type": "string",
+          "description": "Associated tour package or destination name (optional)"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp when the review was created"
+        },
+        "helpfulCount": {
+          "type": "number",
+          "description": "Count of helpful votes received"
+        }
+      },
+      "required": ["userId", "userName", "rating", "title", "comment", "createdAt"]
+    }
+  }
+}
