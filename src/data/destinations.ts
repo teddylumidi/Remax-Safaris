@@ -391,8 +391,10 @@ export const DESTINATIONS: Destination[] = [
     experienceType: 'City',
     tagline: 'Table Mountain wonders, Camps Bay coastal views & Stellenbosch vineyards',
     description: 'South Africa’s Mother City where dramatic mountains meet two oceans. Experience Cableway rides up Table Mountain, Camps Bay beaches, Cape Peninsula drives, and penguin encounters.',
-    image: '/images/capetown_remax_1.jpg',
+    image: '/images/capetown_table_mountain.jpg',
     galleryImages: [
+      '/images/capetown_table_mountain.jpg',
+      '/images/capetown_camps_bay.jpg',
       '/images/capetown_remax_1.jpg',
       '/images/capetown_remax_2.jpg'
     ],
@@ -430,11 +432,11 @@ export const DESTINATIONS: Destination[] = [
     experienceType: 'City',
     tagline: 'Garden City of the future, Gardens by the Bay & Sentosa Island',
     description: 'A global hub blending futuristic architecture, lush indoor waterfall domes at Changi, Gardens by the Bay Supertrees, Universal Studios, and street food paradises.',
-    image: '/images/video_poster_singapore.jpg',
+    image: '/images/singapore_marina_bay_night.jpg',
     galleryImages: [
-      '/images/video_poster_singapore.jpg',
       '/images/singapore_marina_bay_night.jpg',
-      '/images/singapore_gardens_bay.jpg'
+      '/images/singapore_gardens_bay.jpg',
+      '/images/video_poster_singapore.jpg'
     ],
     highlights: ['Gardens by the Bay Light Show', 'Marina Bay Sands SkyPark', 'Universal Studios Sentosa', 'Night Safari Wildlife Park'],
     bestTimeToVisit: 'All year round',
@@ -614,6 +616,7 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/zanzibar_turtle_swimming.jpg',
     galleryImages: [
       '/images/zanzibar_turtle_swimming.jpg',
+      '/images/zanzibar_turtle_aquarium.jpg',
       '/images/zanzibar_stone_town.jpg',
       '/images/zanzibar_kendwa_beach.jpg'
     ],

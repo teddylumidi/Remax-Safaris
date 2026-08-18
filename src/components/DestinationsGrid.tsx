@@ -32,7 +32,10 @@ const DestinationCardItem: React.FC<DestinationCardItemProps> = ({ dest, onSelec
 
   const getImageLabel = (index: number) => {
     if (dest.id === 'cape-town') {
-      return index === 0 ? 'Table Mountain' : 'Summit View';
+      if (index === 0) return 'Table Mountain';
+      if (index === 1) return 'Camps Bay';
+      if (index === 2) return 'Remax Cape Town';
+      return 'Cape Town View';
     }
     if (dest.id === 'nakuru') {
       if (index === 0) return 'Flamingo Shoreline';
@@ -41,7 +44,7 @@ const DestinationCardItem: React.FC<DestinationCardItemProps> = ({ dest, onSelec
       return 'Lesser Flamingo';
     }
     if (dest.id === 'amboseli') {
-      return index === 0 ? 'Kibo Entrance' : 'Lounge';
+      return index === 0 ? 'Kibo Entrance' : 'Karibu Lounge';
     }
     if (dest.id === 'naivasha') {
       if (index === 0) return 'Hippo Shores';
@@ -50,22 +53,123 @@ const DestinationCardItem: React.FC<DestinationCardItemProps> = ({ dest, onSelec
     }
     if (dest.id === 'zanzibar') {
       if (index === 0) return 'Turtle Swimming';
-      if (index === 1) return 'Stone Town';
+      if (index === 1) return 'Turtle Aquarium';
+      if (index === 2) return 'Stone Town';
       return 'Kendwa Beach';
     }
     if (dest.id === 'kisumu') {
       return index === 0 ? 'Lake Victoria Sunset' : 'Dunga Lake View';
+    }
+    if (dest.id === 'maasai-mara') {
+      if (index === 0) return 'Binocular Drive';
+      if (index === 1) return 'Safari Cruiser';
+      return 'Savannah Expanse';
+    }
+    if (dest.id === 'samburu') {
+      if (index === 0) return 'Giraffe Reserve';
+      if (index === 1) return 'Ewaso River';
+      return 'Warrior Heritage';
+    }
+    if (dest.id === 'tsavo') {
+      if (index === 0) return 'Elephant Herd';
+      if (index === 1) return 'Waterhole';
+      if (index === 2) return 'Elephant Savannah';
+      return 'Sunset Horizon';
+    }
+    if (dest.id === 'nairobi') {
+      if (index === 0) return 'Safari Cruiser';
+      if (index === 1) return 'Binocular Drive';
+      return 'Warrior Heritage';
+    }
+    if (dest.id === 'mombasa') {
+      if (index === 0) return 'Fort Jesus';
+      if (index === 1) return 'Dhow Cruise';
+      return 'Swahili Old Town';
+    }
+    if (dest.id === 'diani') {
+      if (index === 0) return 'Diani Beach';
+      if (index === 1) return 'Coral Coast';
+      return 'Indian Ocean';
+    }
+    if (dest.id === 'malindi') {
+      if (index === 0) return 'Malindi Shore';
+      if (index === 1) return 'Coral Reef';
+      return 'White Sands';
+    }
+    if (dest.id === 'lamu') {
+      if (index === 0) return 'Old Town';
+      if (index === 1) return 'Dhow Waterfront';
+      return 'Coastal Heritage';
+    }
+    if (dest.id === 'nanyuki') {
+      if (index === 0) return 'Mt Kenya Equator';
+      if (index === 1) return 'Ol Pejeta Rhino';
+      return 'Safari Lodge';
+    }
+    if (dest.id === 'singapore') {
+      if (index === 0) return 'Marina Bay Night';
+      if (index === 1) return 'Gardens by the Bay';
+      return 'City Skyline';
+    }
+    if (dest.id === 'dubai') {
+      if (index === 0) return 'Burj Khalifa';
+      if (index === 1) return 'Dubai Marina';
+      if (index === 2) return 'Downtown Skyline';
+      return 'Palm Jumeirah';
+    }
+    if (dest.id === 'bali') {
+      if (index === 0) return 'Rice Terraces';
+      if (index === 1) return 'Temple Sunrise';
+      return 'Beach Sunset';
+    }
+    if (dest.id === 'egypt') {
+      if (index === 0) return 'Pyramids of Giza';
+      if (index === 1) return 'Nile Felucca';
+      return 'Luxor & Karnak';
+    }
+    if (dest.id === 'malaysia') {
+      if (index === 0) return 'Petronas Towers';
+      if (index === 1) return 'Batu Caves';
+      return 'Langkawi Cable Car';
+    }
+    if (dest.id === 'turkey') {
+      if (index === 0) return 'Cappadocia Balloons';
+      if (index === 1) return 'Hagia Sophia';
+      return 'Pamukkale Terraces';
+    }
+    if (dest.id === 'maldives') {
+      if (index === 0) return 'Overwater Villa';
+      if (index === 1) return 'Coral Reef';
+      return 'Sunset Lagoon';
+    }
+    if (dest.id === 'thailand') {
+      if (index === 0) return 'Phuket Islands';
+      if (index === 1) return 'Chiang Mai Temple';
+      return 'Phi Phi Islands';
+    }
+    if (dest.id === 'china') {
+      if (index === 0) return 'Great Wall';
+      if (index === 1) return 'Forbidden City';
+      return 'Shanghai Skyline';
+    }
+    if (dest.id === 'rwanda') {
+      if (index === 0) return 'Mountain Gorillas';
+      if (index === 1) return 'Volcanoes NP';
+      return 'Luxury Lodge';
     }
     return `View ${index + 1}`;
   };
 
   const getImageIcon = (index: number) => {
     if (dest.id === 'cape-town') {
-      return '🏔️';
+      if (index === 0) return '🏔️';
+      if (index === 1) return '🏖️';
+      return '🌆';
     }
     if (dest.id === 'zanzibar') {
       if (index === 0) return '🐢';
-      if (index === 1) return '🏛️';
+      if (index === 1) return '🐢';
+      if (index === 2) return '🏛️';
       return '🏖️';
     }
     if (dest.id === 'kisumu') {
@@ -82,6 +186,22 @@ const DestinationCardItem: React.FC<DestinationCardItemProps> = ({ dest, onSelec
     if (dest.id === 'amboseli') {
       return index === 0 ? '🏕️' : '🛋️';
     }
+    if (dest.id === 'maasai-mara' || dest.id === 'nairobi') return '🦁';
+    if (dest.id === 'samburu') return index === 0 ? '🦒' : '🌿';
+    if (dest.id === 'tsavo') return '🐘';
+    if (dest.id === 'mombasa' || dest.id === 'lamu') return index === 0 ? '🏰' : '⛵';
+    if (dest.id === 'diani' || dest.id === 'malindi' || dest.id === 'watamu') return '🏖️';
+    if (dest.id === 'nanyuki') return index === 0 ? '🏔️' : '🦏';
+    if (dest.id === 'singapore') return index === 0 ? '🌃' : '🌿';
+    if (dest.id === 'dubai') return '🏙️';
+    if (dest.id === 'bali') return index === 0 ? '🌾' : '🛕';
+    if (dest.id === 'egypt') return index === 0 ? '🏺' : '⛵';
+    if (dest.id === 'malaysia') return index === 0 ? '🏙️' : '🚡';
+    if (dest.id === 'turkey') return index === 0 ? '🎈' : '🕌';
+    if (dest.id === 'maldives') return index === 0 ? '🏝️' : '🤿';
+    if (dest.id === 'thailand') return index === 0 ? '🏖️' : '🛕';
+    if (dest.id === 'china') return index === 0 ? '🏯' : '🌆';
+    if (dest.id === 'rwanda' || dest.id === 'uganda') return '🦍';
     return '📸';
   };
 
