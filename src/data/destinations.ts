@@ -212,8 +212,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/elementaita_pelicans_lake.jpg',
     galleryImages: [
       '/images/elementaita_pelicans_lake.jpg',
-      '/images/nakuru_flamingos_shore.jpg',
-      '/images/naivasha_hippos_shore.jpg'
+      '/images/elementaita_flamingos_flock.jpg',
+      '/images/elementaita_sunrise_shore.jpg'
     ],
     highlights: ['Greater & Lesser Flamingos', 'Pelican Breeding Grounds', 'Kikopey Hot Springs', 'Kariandusi Prehistoric Site'],
     bestTimeToVisit: 'June to February',
@@ -232,8 +232,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/kajiado_ngong_hills.jpg',
     galleryImages: [
       '/images/kajiado_ngong_hills.jpg',
-      '/images/safari_landscape_expanse.jpg',
-      '/images/safari_sunset_horizon.jpg'
+      '/images/kajiado_maasai_boma.jpg',
+      '/images/kajiado_lake_magadi.jpg'
     ],
     highlights: ['Ngong Hills Hiking', 'Lake Magadi Flamingo Lake', 'Olorgasailie Prehistoric Site', 'Authentic Cultural Bomas'],
     bestTimeToVisit: 'All year round',
