@@ -50,7 +50,7 @@ const DestinationCardItem: React.FC<DestinationCardItemProps> = ({ dest, onSelec
       return index === 0 ? 'Turtle Sanctuary' : 'Lagoon Turtles';
     }
     if (dest.id === 'kisumu') {
-      return index === 0 ? 'Lake Victoria' : 'Dunga Beach';
+      return index === 0 ? 'Lake Victoria' : 'Dunga Lake View';
     }
     return `View ${index + 1}`;
   };

@@ -5,7 +5,7 @@ import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT ? parseInt(process.env.PORT) : 5000;
 
 // Optimize compression: compress text, html, json, css, js, but bypass already compressed media (mp4, webm, jpg, png, woff2)
 app.use(

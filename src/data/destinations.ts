@@ -327,7 +327,8 @@ export const DESTINATIONS: Destination[] = [
     description: 'South Africa’s Mother City where dramatic mountains meet two oceans. Experience Cableway rides up Table Mountain, Camps Bay beaches, Cape Peninsula drives, and penguin encounters.',
     image: '/images/capetown_table_mountain.jpg',
     galleryImages: [
-      '/images/capetown_table_mountain.jpg'
+      '/images/capetown_table_mountain.jpg',
+      '/images/capetown_camps_bay.jpg'
     ],
     highlights: ['Table Mountain Aerial Cableway & Summit View', 'Camps Bay & Twelve Apostles Coastline', 'Boulders Beach African Penguins'],
     bestTimeToVisit: 'November to March',
@@ -493,9 +494,10 @@ export const DESTINATIONS: Destination[] = [
     experienceType: 'Beach',
     tagline: 'Nungwi sea turtle swimming, Stone Town heritage & pristine Kendwa beaches',
     description: 'An enchanted tropical island off Tanzania’s coast. Swim up-close with green sea turtles in Nungwi Baraka Natural Aquarium, sail traditional wooden dhows over clear turquoise waters, tour organic spice farms, and wander historic Stone Town alleys.',
-    image: '/images/zanzibar_turtle_aquarium.jpg',
+    image: '/images/zanzibar_turtle_sanctuary.jpg',
     galleryImages: [
-      '/images/zanzibar_turtle_aquarium.jpg'
+      '/images/zanzibar_turtle_sanctuary.jpg',
+      '/images/zanzibar_turtle_closeup.jpg'
     ],
     highlights: ['Nungwi Baraka Sea Turtle Swimming', 'Traditional Dhow Safari Blue Cruise', 'Stone Town UNESCO Tour'],
     bestTimeToVisit: 'June to October & December to February',
