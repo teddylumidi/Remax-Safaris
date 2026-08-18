@@ -1,5 +1,4 @@
 import { Destination } from '../types';
-
 export const DESTINATIONS: Destination[] = [
   // --- KENYA DESTINATIONS (18) ---
   {
@@ -148,7 +147,7 @@ export const DESTINATIONS: Destination[] = [
     galleryImages: [
       '/images/naivasha_hippos_shore.jpg',
       '/images/naivasha_boat_safari.jpg',
-      'https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?auto=format&fit=crop&w=800&q=70'
+      '/images/naivasha_hellsgate.jpg'
     ],
     highlights: ['Lake Naivasha Hippo Shore Spotting', 'Motorboat Lake Safari & Fish Eagles', 'Crescent Island Walking Safari', 'Hell’s Gate Biking & Gorge Walk'],
     bestTimeToVisit: 'All year round',
@@ -497,8 +496,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/zanzibar_turtle_swimming.jpg',
     galleryImages: [
       '/images/zanzibar_turtle_swimming.jpg',
-      'https://images.unsplash.com/photo-1595872089523-69b6a9082a9e?auto=format&fit=crop&w=800&q=70',
-      'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=70'
+      '/images/zanzibar_stone_town.jpg',
+      '/images/zanzibar_kendwa_beach.jpg'
     ],
     highlights: ['Nungwi Baraka Sea Turtle Swimming', 'Traditional Dhow Safari Blue Cruise', 'Stone Town UNESCO Tour'],
     bestTimeToVisit: 'June to October & December to February',

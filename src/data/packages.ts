@@ -1,5 +1,4 @@
 import { TourPackage } from '../types';
-
 export const TOUR_PACKAGES: TourPackage[] = [
   {
     id: 'mara-3days-safari',
@@ -324,8 +323,8 @@ export const TOUR_PACKAGES: TourPackage[] = [
     image: '/images/zanzibar_turtle_swimming.jpg',
     galleryImages: [
       '/images/zanzibar_turtle_swimming.jpg',
-      'https://images.unsplash.com/photo-1595872089523-69b6a9082a9e?auto=format&fit=crop&w=800&q=70',
-      'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=70'
+      '/images/zanzibar_stone_town.jpg',
+      '/images/zanzibar_kendwa_beach.jpg'
     ],
     inclusions: [
       '3 Nights in Kendwa beachfront resort',
