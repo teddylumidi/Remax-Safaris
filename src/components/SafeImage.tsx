@@ -18,9 +18,17 @@ const CATEGORY_FALLBACKS: Record<string, string> = {
   default: '/images/safari_sunset_horizon.jpg'
 };
 
-// SVG placeholder generator as bulletproof offline fallback
+// Cache-bust a local image path so the browser skips a stale broken entry
+const cacheBust = (url: string): string => {
+  if (!url || url.startsWith('data:')) return url;
+  return url.includes('?') ? url : `${url}?cb=${Date.now()}`;
+};
+
+// SVG placeholder — last resort only
 const generateSvgPlaceholder = (title: string): string => {
-  const cleanTitle = (title || 'Remax Safaris').length > 25 ? (title || 'Remax Safaris').substring(0, 22) + '...' : (title || 'Remax Safaris');
+  const cleanTitle = (title || 'Remax Safaris').length > 25
+    ? (title || 'Remax Safaris').substring(0, 22) + '...'
+    : (title || 'Remax Safaris');
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
     <defs>
       <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -38,6 +46,13 @@ const generateSvgPlaceholder = (title: string): string => {
   return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
 };
 
+// Fallback ladder:
+//   0  → original src
+//   1  → cache-busted original src  (clears any browser-cached broken file)
+//   2  → fallbackSrc / category fallback
+//   3  → cache-busted fallbackSrc   (in case that's also stale)
+//   4  → SVG placeholder
+
 export const SafeImage: React.FC<SafeImageProps> = ({
   src,
   alt,
@@ -49,35 +64,46 @@ export const SafeImage: React.FC<SafeImageProps> = ({
   onLoad,
   ...props
 }) => {
-  const fallbackUrl = fallbackSrc || customFallback;
-  const initialUrl = src || fallbackUrl || CATEGORY_FALLBACKS[fallbackCategory] || CATEGORY_FALLBACKS.default;
-  const [imageSrc, setImageSrc] = useState<string>(initialUrl);
-  const [fallbackLevel, setFallbackLevel] = useState<number>(0);
+  const altUrl = fallbackSrc || customFallback;
+  const primaryUrl = src || altUrl || CATEGORY_FALLBACKS[fallbackCategory] || CATEGORY_FALLBACKS.default;
+
+  const [imageSrc, setImageSrc] = useState<string>(primaryUrl);
+  const [level, setLevel] = useState<number>(0);
 
   useEffect(() => {
-    const nextUrl = src || fallbackUrl || CATEGORY_FALLBACKS[fallbackCategory] || CATEGORY_FALLBACKS.default;
-    setImageSrc(nextUrl);
-    setFallbackLevel(0);
-  }, [src, fallbackCategory, fallbackUrl]);
+    const next = src || altUrl || CATEGORY_FALLBACKS[fallbackCategory] || CATEGORY_FALLBACKS.default;
+    setImageSrc(next);
+    setLevel(0);
+  }, [src, fallbackCategory, altUrl]);
 
   const handleError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-    if (fallbackLevel === 0) {
-      const nextUrl = fallbackUrl || CATEGORY_FALLBACKS[fallbackCategory] || CATEGORY_FALLBACKS.default;
-      setFallbackLevel(1);
-      if (nextUrl !== imageSrc) {
-        setImageSrc(nextUrl);
+    const secondary = altUrl || CATEGORY_FALLBACKS[fallbackCategory] || CATEGORY_FALLBACKS.default;
+
+    if (level === 0) {
+      // Try cache-busted version of the primary src first
+      setLevel(1);
+      setImageSrc(cacheBust(primaryUrl));
+    } else if (level === 1) {
+      // Primary definitely gone — try secondary
+      setLevel(2);
+      if (secondary !== primaryUrl) {
+        setImageSrc(secondary);
       } else {
-        setFallbackLevel(2);
+        // secondary same as primary; jump straight to SVG
+        setLevel(4);
         setImageSrc(generateSvgPlaceholder(alt));
       }
-    } else if (fallbackLevel === 1) {
-      setFallbackLevel(2);
+    } else if (level === 2) {
+      // Try cache-busted secondary
+      setLevel(3);
+      setImageSrc(cacheBust(secondary));
+    } else if (level === 3) {
+      // Everything exhausted — show SVG
+      setLevel(4);
       setImageSrc(generateSvgPlaceholder(alt));
     }
 
-    if (onError) {
-      onError(e);
-    }
+    if (onError) onError(e);
   };
 
   return (
