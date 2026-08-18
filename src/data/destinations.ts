@@ -575,8 +575,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/rwanda_mountain_gorillas.jpg',
     galleryImages: [
       '/images/rwanda_mountain_gorillas.jpg',
-      '/images/safari_landscape_expanse.jpg',
-      '/images/luxury_safari_hero_sirikoi.jpg'
+      '/images/rwanda_volcanoes_park.jpg',
+      '/images/rwanda_kigali_hills.jpg'
     ],
     highlights: ['Gorilla Trekking in Volcanoes Park', 'Kigali Genocide Memorial & City Tour', 'Nyungwe Canopy Walk', 'Lake Kivu Relaxation'],
     bestTimeToVisit: 'June to September & December to February',
@@ -592,12 +592,12 @@ export const DESTINATIONS: Destination[] = [
     experienceType: 'Safari',
     tagline: 'The Pearl of Africa, Bwindi gorillas & Murchison Falls',
     description: 'Famous for Bwindi Impenetrable Forest gorilla safaris, white-water rafting on the Nile at Jinja, and wild safaris in Queen Elizabeth National Park.',
-    image: '/images/safari_landscape_expanse.jpg',
+    image: '/images/uganda_bwindi_gorilla_trekking.jpg',
     galleryImages: [
-      '/images/safari_landscape_expanse.jpg',
-      '/images/safari_sunset_horizon.jpg',
-      '/images/safari_warrior_heritage.jpg',
-      '/images/luxury_safari_hero_sirikoi.jpg'
+      '/images/uganda_bwindi_gorilla_trekking.jpg',
+      '/images/uganda_murchison_falls.jpg',
+      '/images/uganda_jinja_nile_rafting.jpg',
+      '/images/uganda_queen_elizabeth_park.jpg'
     ],
     highlights: ['Bwindi Gorilla Trekking', 'Murchison Falls Boat Safari', 'White Water Rafting Jinja', 'Chimpanzee Tracking Kibale'],
     bestTimeToVisit: 'June to August & December to February',
