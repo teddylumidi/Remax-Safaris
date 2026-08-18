@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { DESTINATIONS } from '../data/destinations';
-import { TOUR_PACKAGES } from '../data/packages';
 import { SafeImage } from './SafeImage';
 import { useImageLightbox, LightboxImage } from '../context/ImageLightboxContext';
 import { Camera, Maximize2, Sparkles, Filter, MapPin, Layers } from 'lucide-react';
@@ -34,17 +33,6 @@ const GALLERY_ITEMS: (LightboxImage & { id: string; category: string })[] = [
       description: d.tagline
     }));
   }),
-  ...TOUR_PACKAGES.flatMap((p) => {
-    const images = p.galleryImages && p.galleryImages.length > 0 ? p.galleryImages : [p.image];
-    return images.map((imgSrc, idx) => ({
-      id: `pkg-${p.id}-${idx}`,
-      src: imgSrc,
-      title: `${p.title}${images.length > 1 ? ` - Image ${idx + 1}` : ''}`,
-      category: p.category === 'kenya' ? 'Safari' : 'International',
-      location: p.destinationName,
-      description: `${p.duration} Tour Package`
-    }));
-  })
 ];
 
 // Remove duplicates based on src URL
