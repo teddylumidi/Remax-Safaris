@@ -29,6 +29,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Rugged northern frontier with unique wildlife Special Five',
     description: 'A striking arid landscape bisected by the Ewaso Ng’iro River. Famous for the "Samburu Special Five": reticulated giraffe, Grevy’s zebra, Beisa oryx, Gerenuk, and Somali ostrich.',
     image: '/images/samburu_giraffe_reserve.jpg',
+    galleryImages: [
+      '/images/samburu_giraffe_reserve.jpg',
+      '/images/samburu_ewaso_river_palms.jpg',
+      '/images/safari_warrior_heritage.jpg'
+    ],
     highlights: ['Samburu Special 5', 'Ewaso Ng’iro River Palms', 'Leopard Spotting', 'Samburu Culture'],
     bestTimeToVisit: 'June to October & December to March',
     popularActivities: ['River Game Drives', 'Cultural Encounters', 'Camel Safaris', 'Bird Watching'],
@@ -44,6 +49,12 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Kenya’s largest wilderness, iconic Salt Lick lodge & Mzima Springs',
     description: 'Comprising Tsavo East and Tsavo West, famous for iconic stilt-supported Salt Lick safari lodges over waterholes, dust-red elephant herds, Shetani lava flows, and crystal-clear Mzima Springs.',
     image: '/images/bespoke_safari_elephants.jpg',
+    galleryImages: [
+      '/images/bespoke_safari_elephants.jpg',
+      '/images/video_poster_elephants.jpg',
+      '/images/video_poster_elephants_waterhole.jpg',
+      '/images/safari_sunset_horizon.jpg'
+    ],
     highlights: ['Salt Lick Stilt Safari Lodge', 'Famous Red Elephants', 'Mzima Springs Underwater Hippo View', 'Aruba Dam & Shetani Lava'],
     bestTimeToVisit: 'June to October & January to February',
     popularActivities: ['Game Drives', 'Hippo & Crocodile Viewing', 'Lava Cave Exploration', 'Salt Lick Waterhole Viewing'],
@@ -78,6 +89,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Historic coastal hub with Swahili heritage & pristine beaches',
     description: 'Kenya’s tropical coastal gateway blending rich Swahili history, Portuguese Fort Jesus, bustling spice markets, and warm Indian Ocean beach resorts.',
     image: '/images/mombasa_fort_jesus_coast.jpg',
+    galleryImages: [
+      '/images/mombasa_fort_jesus_coast.jpg',
+      '/images/mombasa_dhow_cruise.jpg',
+      '/images/lamu_old_town_swahili.jpg'
+    ],
     highlights: ['Fort Jesus UNESCO Site', 'Old Town Walk & Spice Market', 'Tamarind Dhow Dinner', 'Mombasa Marine Park'],
     bestTimeToVisit: 'October to March',
     popularActivities: ['Historic Tours', 'Dhow Sunset Cruises', 'Snorkeling', 'Swahili Culinary Tours'],
@@ -93,6 +109,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Award-winning white sand paradise & turquoise waters',
     description: 'Multiple-time winner of Africa’s leading beach destination. Diani offers soft white sand, turquoise lagoons, coral reefs, kite surfing, and luxury beach resorts.',
     image: '/images/diani_white_sand_beach.jpg',
+    galleryImages: [
+      '/images/diani_white_sand_beach.jpg',
+      '/images/watamu_coral_beach.jpg',
+      '/images/malindi_beach_coast.jpg'
+    ],
     highlights: ['Powder White Sands', 'Skydiving & Kitesurfing', 'Shimba Hills Safari Nearby', 'Kisite Mpunguti Marine Park'],
     bestTimeToVisit: 'All year round (Best: Nov-Mar & Jul-Oct)',
     popularActivities: ['Dolphin Safaris', 'Kitesurfing', 'Deep Sea Fishing', 'Beachfront Relaxation'],
@@ -108,6 +129,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Charming coastal town with Vasco da Gama Pillar & marine parks',
     description: 'A serene blend of Italian flair and Swahili coastal charm. Discover golden beaches, the historic Vasco da Gama Pillar, and Malindi Marine National Park.',
     image: '/images/malindi_beach_coast.jpg',
+    galleryImages: [
+      '/images/malindi_beach_coast.jpg',
+      '/images/watamu_coral_beach.jpg',
+      '/images/diani_white_sand_beach.jpg'
+    ],
     highlights: ['Vasco da Gama Pillar', 'Marafa Hell’s Kitchen', 'Glass Bottom Boat Tours', 'Silversands Beach'],
     bestTimeToVisit: 'October to April',
     popularActivities: ['Marine Snorkeling', 'Canyon Tours at Marafa', 'Deep Sea Fishing', 'Historical Walks'],
@@ -184,6 +210,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Tranquil soda lake, pelicans & luxury Rift Valley retreats',
     description: 'A serene UNESCO World Heritage site known for thousands of pelicans, flamingos, hot springs, and peaceful lakefront luxury lodges away from crowds.',
     image: '/images/elementaita_pelicans_lake.jpg',
+    galleryImages: [
+      '/images/elementaita_pelicans_lake.jpg',
+      '/images/nakuru_flamingos_shore.jpg',
+      '/images/naivasha_hippos_shore.jpg'
+    ],
     highlights: ['Greater & Lesser Flamingos', 'Pelican Breeding Grounds', 'Kikopey Hot Springs', 'Kariandusi Prehistoric Site'],
     bestTimeToVisit: 'June to February',
     popularActivities: ['Guided Lake Walks', 'Bird Watching', 'Quad Biking', 'Wellness & Spa Relaxation'],
@@ -199,6 +230,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Scenic Maasai heartland, Ngong Hills & Rift Valley escarpments',
     description: 'Discover dramatic escarpments, authentic Maasai homesteads, Ngong Hills hiking trails, and private conservancies near Lake Magadi.',
     image: '/images/kajiado_ngong_hills.jpg',
+    galleryImages: [
+      '/images/kajiado_ngong_hills.jpg',
+      '/images/safari_landscape_expanse.jpg',
+      '/images/safari_sunset_horizon.jpg'
+    ],
     highlights: ['Ngong Hills Hiking', 'Lake Magadi Flamingo Lake', 'Olorgasailie Prehistoric Site', 'Authentic Cultural Bomas'],
     bestTimeToVisit: 'All year round',
     popularActivities: ['Hiking & Trekking', 'Hot Springs Bathing', 'Cultural Cultural Tours', 'Scenic Escarpment Drives'],
@@ -214,6 +250,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Tropical marine haven, turtle bay & mangrove dhow expeditions',
     description: 'Famous for pristine coral gardens, sea turtle sanctuaries, Mida Creek mangrove kayaking, and serene luxury villas along the Indian Ocean coast.',
     image: '/images/watamu_coral_beach.jpg',
+    galleryImages: [
+      '/images/watamu_coral_beach.jpg',
+      '/images/malindi_beach_coast.jpg',
+      '/images/zanzibar_turtle_swimming.jpg'
+    ],
     highlights: ['Watamu Marine Park Snorkeling', 'Mida Creek Dhow Sunset', 'Local Ocean Turtle Trust', 'Gede Ruins Exploration'],
     bestTimeToVisit: 'October to April',
     popularActivities: ['Dolphin Watching', 'Paddleboarding Mida Creek', 'Deep Sea Fishing', 'Beach Lounging'],
@@ -229,6 +270,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Savannah gateways, quad biking & weekend country escapes',
     description: 'Located at the edge of the Kapiti Plains, ideal for quick weekend retreats, adventure quad biking, resort getaways, and savannah birdwatching.',
     image: '/images/safari_sunset_horizon.jpg',
+    galleryImages: [
+      '/images/safari_sunset_horizon.jpg',
+      '/images/safari_landscape_expanse.jpg',
+      '/images/park_safari_cruiser_wildlife.jpg'
+    ],
     highlights: ['Savannah Sunset Spots', 'Adventure Quad Biking Trails', 'Resort Swimming & Dining', 'Proximity to Nairobi'],
     bestTimeToVisit: 'All year round',
     popularActivities: ['Day Outings', 'Team Building', 'Quad Biking', 'Family Weekend Getaways'],
@@ -244,6 +290,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Machakos People’s Park, Lukenya Hills & scenic ridge adventures',
     description: 'Surrounded by picturesque Akamba hills, Machakos offers adventure rock climbing at Lukenya, zip-lining, family park leisure, and vibrant hill hikes.',
     image: '/images/machakos_lukenya_hills.jpg',
+    galleryImages: [
+      '/images/machakos_lukenya_hills.jpg',
+      '/images/kajiado_ngong_hills.jpg',
+      '/images/safari_landscape_expanse.jpg'
+    ],
     highlights: ["Machakos People's Park", 'Lukenya Hills Rock Climbing', 'Iveti Hills Scenic View', 'Katani Adventure Trails'],
     bestTimeToVisit: 'All year round',
     popularActivities: ['Rock Climbing', 'Park Leisure', 'Hiking', 'Ziplining'],
@@ -259,6 +310,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Timeless UNESCO Swahili island, dhow sailing & car-free streets',
     description: 'Step back in time to Kenya’s oldest continuously inhabited Swahili settlement. No cars, only donkeys, intricate wooden doors, dhow sailing, and Shela Beach.',
     image: '/images/lamu_old_town_swahili.jpg',
+    galleryImages: [
+      '/images/lamu_old_town_swahili.jpg',
+      '/images/lamu_dhow_waterfront.jpg',
+      '/images/mombasa_fort_jesus_coast.jpg'
+    ],
     highlights: ['Lamu Old Town UNESCO', 'Shela Sand Dunes & Beach', 'Sunset Dhow Safaris', 'Swahili Architecture'],
     bestTimeToVisit: 'November to March',
     popularActivities: ['Sunset Dhow Cruises', 'Swahili Cultural Walks', 'Yoga & Wellness Retreats', 'Deep Sea Fishing'],
@@ -293,6 +349,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Equator landmark, Mount Kenya vistas & Ol Pejeta rhino sanctuary',
     description: 'Located right on the Equator line at the foot of Mount Kenya. Home to Ol Pejeta Conservancy (last northern white rhinos, chimpanzees) and luxury safari ranches.',
     image: '/images/nanyuki_mount_kenya_equator.jpg',
+    galleryImages: [
+      '/images/nanyuki_mount_kenya_equator.jpg',
+      '/images/nanyuki_ol_pejeta_rhino.jpg',
+      '/images/luxury_safari_hero_sirikoi.jpg'
+    ],
     highlights: ['Ol Pejeta Rhino Sanctuary', 'Equator Crossing Point', 'Mount Kenya Climbing Gate', 'Chimpanzee Sanctuary'],
     bestTimeToVisit: 'December to March & June to October',
     popularActivities: ['Conservancy Game Drives', 'Equator Photography', 'Mountain Trekking', 'Luxury Ranch Stays'],
@@ -310,6 +371,12 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Luxury metropolis, desert safaris & futuristic architecture',
     description: 'A dazzling destination featuring Burj Khalifa, desert dune bashing, luxury dhow cruises, Dubai Mall shopping, and world-class theme parks.',
     image: '/images/uae_dubai_burj_khalifa.jpg',
+    galleryImages: [
+      '/images/uae_dubai_burj_khalifa.jpg',
+      '/images/uae_dubai_marina_night.jpg',
+      '/images/uae_dubai_skyline_downtown.jpg',
+      '/images/uae_palm_jumeirah.jpg'
+    ],
     highlights: ['Burj Khalifa Top View', 'Desert Safari with BBQ Dinner', 'Dubai Marina Dhow Cruise', 'Museum of the Future'],
     bestTimeToVisit: 'November to April',
     popularActivities: ['Desert Dune Bashing', 'Luxury Shopping', 'Theme Park Visits', 'Skydiving Palm Jumeirah'],
@@ -344,6 +411,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Island of the Gods, Ubud rice terraces & tranquil luxury villas',
     description: 'Tropical paradise in Indonesia boasting spiritual temples, lush Ubud jungle swings, volcanic mountain sunrises, and world-renowned surf beaches.',
     image: '/images/bali_rice_terraces_ubud.jpg',
+    galleryImages: [
+      '/images/bali_rice_terraces_ubud.jpg',
+      '/images/bali_temple_sunrise.jpg',
+      '/images/bali_beach_sunset.jpg'
+    ],
     highlights: ['Tegallalang Rice Terraces', 'Tanah Lot Temple Sunset', 'Ubud Monkey Forest', 'Nusa Penida Island Tour'],
     bestTimeToVisit: 'April to October',
     popularActivities: ['Jungle Swings', 'Temple Visits', 'Island Hopping', 'Spa & Wellness Retreats'],
@@ -359,6 +431,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Garden City of the future, Gardens by the Bay & Sentosa Island',
     description: 'A global hub blending futuristic architecture, lush indoor waterfall domes at Changi, Gardens by the Bay Supertrees, Universal Studios, and street food paradises.',
     image: '/images/video_poster_singapore.jpg',
+    galleryImages: [
+      '/images/video_poster_singapore.jpg',
+      '/images/singapore_marina_bay_night.jpg',
+      '/images/singapore_gardens_bay.jpg'
+    ],
     highlights: ['Gardens by the Bay Light Show', 'Marina Bay Sands SkyPark', 'Universal Studios Sentosa', 'Night Safari Wildlife Park'],
     bestTimeToVisit: 'All year round',
     popularActivities: ['Theme Parks', 'City Skyline Photography', 'Night Safari', 'Hawker Center Food Tours'],
@@ -374,6 +451,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Ancient wonders of the Pharaohs, Pyramids of Giza & Nile River',
     description: 'Journey back in time to the land of the Pyramids, Great Sphinx, Valley of the Kings in Luxor, and luxurious Nile River cruises under desert stars.',
     image: '/images/egypt_pyramids_giza.jpg',
+    galleryImages: [
+      '/images/egypt_pyramids_giza.jpg',
+      '/images/egypt_nile_felucca.jpg',
+      '/images/egypt_luxor_karnak.jpg'
+    ],
     highlights: ['Pyramids of Giza & Sphinx', 'Luxor & Karnak Temples', 'Nile River Cruise', 'Khan el-Khalili Bazaar'],
     bestTimeToVisit: 'October to April',
     popularActivities: ['Nile River Cruising', 'Pyramid Exploration', 'Desert Quad Biking', 'Red Sea Diving at Hurghada'],
@@ -389,6 +471,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Petronas Twin Towers, Langkawi cable cars & cultural rainforests',
     description: 'A vibrant Southeast Asian destination featuring Kuala Lumpur’s iconic skyline, Batu Caves, cool Genting Highlands, and tropical beaches of Langkawi.',
     image: '/images/malaysia_petronas_towers.jpg',
+    galleryImages: [
+      '/images/malaysia_petronas_towers.jpg',
+      '/images/malaysia_batu_caves.jpg',
+      '/images/malaysia_langkawi_cable_car.jpg'
+    ],
     highlights: ['Petronas Twin Towers Skybridge', 'Batu Caves Rainbow Steps', 'Langkawi Cable Car & Sky Bridge', 'Penang Heritage Food Tour'],
     bestTimeToVisit: 'March to October',
     popularActivities: ['City Sightseeing', 'Island Hopping', 'Cable Car Rides', 'Cultural Heritage Walks'],
@@ -404,6 +491,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Cappadocia hot air balloons, Istanbul Bosphorus & Pamukkale',
     description: 'Where East meets West. Marvel at colorful hot air balloons floating over Cappadocia’s fairy chimneys at sunrise, historic Hagia Sophia in Istanbul, and thermal travertine pools in Pamukkale.',
     image: '/images/turkey_cappadocia_balloons.jpg',
+    galleryImages: [
+      '/images/turkey_cappadocia_balloons.jpg',
+      '/images/turkey_istanbul_hagia_sophia.jpg',
+      '/images/turkey_pamukkale_terraces.jpg'
+    ],
     highlights: ['Cappadocia Hot Air Balloon Flight', 'Hagia Sophia & Blue Mosque', 'Bosphorus Sunset Cruise', 'Pamukkale Thermal Pools'],
     bestTimeToVisit: 'April to May & September to November',
     popularActivities: ['Hot Air Ballooning', 'Bosphorus Boat Cruises', 'Grand Bazaar Shopping', 'Cave Hotel Stays'],
@@ -419,6 +511,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Overwater bungalow dream, coral reefs & romantic sunsets',
     description: 'The ultimate luxury island getaway. Stay in private overwater villas floating on crystal ocean lagoons, with world-class snorkeling and sunset dolphin cruises.',
     image: '/images/maldives_overwater_villa.jpg',
+    galleryImages: [
+      '/images/maldives_overwater_villa.jpg',
+      '/images/maldives_coral_reef_snorkeling.jpg',
+      '/images/maldives_sunset_lagoon.jpg'
+    ],
     highlights: ['Luxury Overwater Villa Stay', 'Snorkeling with Manta Rays', 'Sunset Dolphin Cruises', 'Underwater Dining'],
     bestTimeToVisit: 'November to April',
     popularActivities: ['Snorkeling & Scuba Diving', 'Sunset Cruises', 'Spa Treatments', 'Candlelit Beach Dinners'],
@@ -434,6 +531,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Land of Smiles, Bangkok temples, Phuket beaches & Phi Phi islands',
     description: 'Exotic beaches, gilded Buddhist temples, vibrant night markets, ethical elephant sanctuaries, and island-hopping in Phuket, Krabi, and Koh Samui.',
     image: '/images/thailand_phuket_islands.jpg',
+    galleryImages: [
+      '/images/thailand_phuket_islands.jpg',
+      '/images/thailand_chiang_mai_temple.jpg',
+      '/images/thailand_phi_phi_islands.jpg'
+    ],
     highlights: ['Phuket & Phi Phi Island Speedboat Tour', 'Grand Palace Bangkok', 'Chiang Mai Elephant Sanctuary', 'Floating Markets'],
     bestTimeToVisit: 'November to April',
     popularActivities: ['Island Hopping', 'Thai Cooking Classes', 'Elephant Care', 'Night Market Shopping'],
@@ -449,6 +551,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Great Wall grandeur, Shanghai skyline & rich imperial history',
     description: 'Immerse in thousands of years of history. Walk along the Great Wall of China, tour the Forbidden City in Beijing, and experience futuristic Shanghai and Guangzhou trading centers.',
     image: '/images/china_great_wall.jpg',
+    galleryImages: [
+      '/images/china_great_wall.jpg',
+      '/images/china_forbidden_city.jpg',
+      '/images/china_shanghai_skyline.jpg'
+    ],
     highlights: ['Great Wall of China Hike', 'Forbidden City Beijing', 'Shanghai Bund Skyline', 'Guangzhou Trade Markets'],
     bestTimeToVisit: 'September to October & April to May',
     popularActivities: ['Great Wall Hiking', 'Bullet Train Rides', 'Sourcing & Trade Tours', 'Imperial Palace Walks'],
@@ -464,6 +571,11 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'Land of a Thousand Hills, Mountain Gorilla trekking & Kigali',
     description: 'A clean, modern, and inspiring African destination. Trek endangered Mountain Gorillas in Volcanoes National Park and explore the vibrant capital of Kigali.',
     image: '/images/rwanda_mountain_gorillas.jpg',
+    galleryImages: [
+      '/images/rwanda_mountain_gorillas.jpg',
+      '/images/safari_landscape_expanse.jpg',
+      '/images/luxury_safari_hero_sirikoi.jpg'
+    ],
     highlights: ['Gorilla Trekking in Volcanoes Park', 'Kigali Genocide Memorial & City Tour', 'Nyungwe Canopy Walk', 'Lake Kivu Relaxation'],
     bestTimeToVisit: 'June to September & December to February',
     popularActivities: ['Gorilla Trekking', 'Canopy Walks', 'Kigali Art & Coffee Tours', 'Lake Kayaking'],
@@ -479,6 +591,12 @@ export const DESTINATIONS: Destination[] = [
     tagline: 'The Pearl of Africa, Bwindi gorillas & Murchison Falls',
     description: 'Famous for Bwindi Impenetrable Forest gorilla safaris, white-water rafting on the Nile at Jinja, and wild safaris in Queen Elizabeth National Park.',
     image: '/images/safari_landscape_expanse.jpg',
+    galleryImages: [
+      '/images/safari_landscape_expanse.jpg',
+      '/images/safari_sunset_horizon.jpg',
+      '/images/safari_warrior_heritage.jpg',
+      '/images/luxury_safari_hero_sirikoi.jpg'
+    ],
     highlights: ['Bwindi Gorilla Trekking', 'Murchison Falls Boat Safari', 'White Water Rafting Jinja', 'Chimpanzee Tracking Kibale'],
     bestTimeToVisit: 'June to August & December to February',
     popularActivities: ['Gorilla & Chimp Trekking', 'River Rafting', 'Savannah Safaris', 'Crater Lakes Walks'],

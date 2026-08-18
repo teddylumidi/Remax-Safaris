@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Logo } from './Logo';
 import { PHONE_NUMBER_DISPLAY, COMPANY_EMAIL, getWhatsAppLink } from '../utils/whatsapp';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { TikTokIcon } from './TikTokIcon';
-import { Phone, Mail, Instagram, Facebook, Youtube } from 'lucide-react';
+import { Phone, Mail, Instagram, Facebook, Youtube, CheckCircle, X } from 'lucide-react';
 
 interface FooterProps {
   onSelectDestination: (destId: string) => void;
@@ -11,6 +11,23 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ onSelectDestination, onOpenQuoteBuilder }) => {
+  const [newsletterOpen, setNewsletterOpen] = useState(false);
+  const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setIsSubscribed(true);
+    setTimeout(() => {
+      setNewsletterOpen(false);
+      setIsSubscribed(false);
+      setEmail('');
+      setFirstName('');
+    }, 2500);
+  };
+
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -164,6 +181,16 @@ export const Footer: React.FC<FooterProps> = ({ onSelectDestination, onOpenQuote
                 </li>
               </ul>
 
+              {/* Newsletter Trigger */}
+              <div className="pt-2">
+                <button
+                  onClick={() => setNewsletterOpen(true)}
+                  className="text-xs text-[#C88A4B] hover:text-white underline tracking-wider font-medium"
+                >
+                  Sign up to our newsletter
+                </button>
+              </div>
+
               {/* Social Channels */}
               <div className="pt-2 flex items-center gap-3">
                 <a
@@ -208,6 +235,76 @@ export const Footer: React.FC<FooterProps> = ({ onSelectDestination, onOpenQuote
         </div>
       </footer>
 
+      {/* Newsletter Modal Dialog */}
+      {newsletterOpen && (
+        <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-[#FAF6F0] dark:bg-[#12231A] border border-[#C88A4B] max-w-md w-full p-8 text-center relative shadow-2xl animate-fade-in">
+            <button
+              onClick={() => setNewsletterOpen(false)}
+              className="absolute top-4 right-4 text-stone-500 hover:text-stone-900 dark:hover:text-white"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="flex justify-center mb-4">
+              <Logo size="md" variant="color" />
+            </div>
+
+            <h3 className="text-xl font-serif font-normal text-[#12231A] dark:text-[#FDFBF7] mb-2">
+              Sign up for Remax Safaris Newsletter
+            </h3>
+            <p className="text-xs text-stone-600 dark:text-stone-400 font-light mb-6">
+              Stay informed about the latest wildlife encounters, seasonal migrations, and bespoke safari journeys.
+            </p>
+
+            {isSubscribed ? (
+              <div className="p-4 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-200 text-xs rounded flex items-center justify-center gap-2">
+                <CheckCircle className="w-4 h-4 text-emerald-600" />
+                <span>Thank you for subscribing to our newsletter!</span>
+              </div>
+            ) : (
+              <form onSubmit={handleNewsletterSubmit} className="space-y-4 text-left">
+                <div>
+                  <label className="block text-[11px] uppercase tracking-wider font-semibold text-stone-700 dark:text-stone-300 mb-1">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    placeholder="Enter your first name"
+                    className="w-full text-xs px-3 py-2 border border-stone-300 dark:border-stone-700 rounded bg-white dark:bg-stone-900 text-stone-900 dark:text-white focus:outline-none focus:border-[#C88A4B]"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[11px] uppercase tracking-wider font-semibold text-stone-700 dark:text-stone-300 mb-1">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="yourname@domain.com"
+                    className="w-full text-xs px-3 py-2 border border-stone-300 dark:border-stone-700 rounded bg-white dark:bg-stone-900 text-stone-900 dark:text-white focus:outline-none focus:border-[#C88A4B]"
+                  />
+                </div>
+
+                <div className="pt-2">
+                  <button
+                    type="submit"
+                    className="w-full sirikoi-button"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 };
