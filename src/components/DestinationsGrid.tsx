@@ -32,35 +32,41 @@ const DestinationCardItem: React.FC<DestinationCardItemProps> = ({ dest, onSelec
 
   const getImageLabel = (index: number) => {
     if (dest.id === 'cape-town') {
-      return index === 0 ? 'Table Mountain' : 'Camps Bay';
+      return index === 0 ? 'Table Mountain' : 'Summit View';
     }
     if (dest.id === 'nakuru') {
-      if (index === 0) return 'Shoreline';
+      if (index === 0) return 'Flamingo Shoreline';
       if (index === 1) return 'Lake View';
-      if (index === 2) return 'Flock';
+      if (index === 2) return 'Flamingo Flock';
       return 'Lesser Flamingo';
     }
     if (dest.id === 'amboseli') {
       return index === 0 ? 'Kibo Entrance' : 'Lounge';
     }
     if (dest.id === 'naivasha') {
-      return index === 0 ? 'Hippo Shores' : 'Boat Safari';
+      if (index === 0) return 'Hippo Shores';
+      if (index === 1) return 'Boat Safari';
+      return "Hell's Gate";
     }
     if (dest.id === 'zanzibar') {
-      return index === 0 ? 'Turtle Sanctuary' : 'Lagoon Turtles';
+      if (index === 0) return 'Nungwi Turtles';
+      if (index === 1) return 'Stone Town';
+      return 'Kendwa Beach';
     }
     if (dest.id === 'kisumu') {
-      return index === 0 ? 'Lake Victoria' : 'Dunga Lake View';
+      return index === 0 ? 'Lake Victoria Sunset' : 'Dunga Lake View';
     }
     return `View ${index + 1}`;
   };
 
   const getImageIcon = (index: number) => {
     if (dest.id === 'cape-town') {
-      return index === 0 ? '🏔️' : '🌊';
+      return '🏔️';
     }
     if (dest.id === 'zanzibar') {
-      return '🐢';
+      if (index === 0) return '🐢';
+      if (index === 1) return '🏛️';
+      return '🏖️';
     }
     if (dest.id === 'kisumu') {
       return index === 0 ? '🌅' : '🚤';
@@ -69,7 +75,9 @@ const DestinationCardItem: React.FC<DestinationCardItemProps> = ({ dest, onSelec
       return '🦩';
     }
     if (dest.id === 'naivasha') {
-      return index === 0 ? '🦛' : '🚤';
+      if (index === 0) return '🦛';
+      if (index === 1) return '🚤';
+      return '🚴';
     }
     if (dest.id === 'amboseli') {
       return index === 0 ? '🏕️' : '🛋️';

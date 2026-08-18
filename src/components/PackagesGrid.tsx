@@ -29,16 +29,25 @@ const PackageCardItem: React.FC<PackageCardItemProps> = ({ pkg, onSelectPackage 
 
   const getImageLabel = (index: number) => {
     if (pkg.id.includes('cape-town') || pkg.destinationId === 'cape-town') {
-      return index === 0 ? 'Table Mountain' : 'Camps Bay';
+      return index === 0 ? 'Table Mountain' : 'Summit View';
     }
     if (pkg.id.includes('zanzibar') || pkg.destinationId === 'zanzibar') {
-      return index === 0 ? 'Turtle Sanctuary' : 'Lagoon Turtles';
+      if (index === 0) return 'Nungwi Turtles';
+      if (index === 1) return 'Stone Town';
+      return 'Kendwa Beach';
     }
     if (pkg.id.includes('nakuru')) {
-      if (index === 0) return 'Shoreline';
+      if (index === 0) return 'Flamingo Shoreline';
       if (index === 1) return 'Lake View';
-      if (index === 2) return 'Pink Flock';
+      if (index === 2) return 'Flamingo Flock';
       return 'Lesser Flamingo';
+    }
+    if (pkg.id.includes('naivasha') || pkg.destinationId === 'naivasha') {
+      if (index === 0) return 'Hippo Shores';
+      return 'Boat Safari';
+    }
+    if (pkg.id.includes('kisumu') || pkg.destinationId === 'kisumu') {
+      return index === 0 ? 'Lake Victoria Sunset' : 'Dunga Lake View';
     }
     return `View ${index + 1}`;
   };

@@ -148,7 +148,7 @@ export const DESTINATIONS: Destination[] = [
     galleryImages: [
       '/images/naivasha_hippos_shore.jpg',
       '/images/naivasha_boat_safari.jpg',
-      'https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=800&q=70&auto=format'
+      'https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?auto=format&fit=crop&w=800&q=70'
     ],
     highlights: ['Lake Naivasha Hippo Shore Spotting', 'Motorboat Lake Safari & Fish Eagles', 'Crescent Island Walking Safari', 'Hell’s Gate Biking & Gorge Walk'],
     bestTimeToVisit: 'All year round',
@@ -328,7 +328,7 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/capetown_table_mountain.jpg',
     galleryImages: [
       '/images/capetown_table_mountain.jpg',
-      '/images/capetown_camps_bay.jpg'
+      '/images/capetown_table_mountain_summit.jpg'
     ],
     highlights: ['Table Mountain Aerial Cableway & Summit View', 'Camps Bay & Twelve Apostles Coastline', 'Boulders Beach African Penguins'],
     bestTimeToVisit: 'November to March',
@@ -497,7 +497,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/zanzibar_turtle_sanctuary.jpg',
     galleryImages: [
       '/images/zanzibar_turtle_sanctuary.jpg',
-      '/images/zanzibar_turtle_closeup.jpg'
+      'https://images.unsplash.com/photo-1595872089523-69b6a9082a9e?auto=format&fit=crop&w=800&q=70',
+      'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=70'
     ],
     highlights: ['Nungwi Baraka Sea Turtle Swimming', 'Traditional Dhow Safari Blue Cruise', 'Stone Town UNESCO Tour'],
     bestTimeToVisit: 'June to October & December to February',
