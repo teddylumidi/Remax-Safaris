@@ -24,9 +24,9 @@ const generateSvgPlaceholder = (title: string): string => {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
     <defs>
       <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#1B4332"/>
-        <stop offset="50%" stop-color="#2D5A46"/>
-        <stop offset="100%" stop-color="#0F281E"/>
+        <stop offset="0%" stop-color="#1A1208"/>
+        <stop offset="50%" stop-color="#2C2010"/>
+        <stop offset="100%" stop-color="#0D0B08"/>
       </linearGradient>
     </defs>
     <rect width="800" height="600" fill="url(#g)"/>
