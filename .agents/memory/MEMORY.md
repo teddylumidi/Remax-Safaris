@@ -1,3 +1,3 @@
 - [Server & port config](server-port.md) — server runs on port 5000; webview workflow must use waitForPort 5000
 - [Hero video cycling](hero-videos.md) — hero cycles all 3 videos in sequence (no random pick); loop=false, cycles on 'ended' event
-- [Destination image mapping](destination-images.md) — strict image/label rules per destination; Zanzibar/Naivasha use Unsplash for missing local images
+- [Destination image mapping](destination-images.md) — all destination/package images are local; no Unsplash URLs anywhere in codebase

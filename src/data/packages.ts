@@ -58,7 +58,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     priceKES: 55000,
     priceUSD: 420,
     badge: 'Beach Special',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70&auto=format',
+    image: '/images/diani_white_sand_beach.jpg',
     inclusions: [
       '4 Nights stay in beachfront 4-star resort',
       'Half board meal plan (Breakfast & Dinner)',
@@ -109,7 +109,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     priceKES: 135000,
     priceUSD: 1040,
     badge: 'Top International',
-    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=70&auto=format',
+    image: '/images/uae_dubai_burj_khalifa.jpg',
     inclusions: [
       '4 Nights in 4-star hotel in Dubai City Centre',
       'Daily breakfast buffet',
@@ -261,7 +261,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     priceKES: 165000,
     priceUSD: 1270,
     badge: 'Honeymoon Choice',
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=70&auto=format',
+    image: '/images/bali_rice_terraces_ubud.jpg',
     inclusions: [
       '3 Nights stay in Ubud Jungle Resort + 2 Nights in Seminyak Beach Resort',
       'Daily breakfast & 2 local lunch experiences',

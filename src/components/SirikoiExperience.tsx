@@ -18,7 +18,7 @@ export const SirikoiExperience: React.FC<SirikoiExperienceProps> = ({
       title: 'REMAX SAFARI HOUSE',
       tagline: 'A beautiful home immersed in nature',
       image: '/images/luxury_safari_hero_sirikoi.jpg',
-      fallback: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80',
+      fallback: '/images/samburu_giraffe_reserve.jpg',
       action: () => onSelectExperience?.('house')
     },
     {
@@ -26,7 +26,7 @@ export const SirikoiExperience: React.FC<SirikoiExperienceProps> = ({
       title: 'REMAX SAFARI COTTAGE',
       tagline: 'Private home with two en-suite bedrooms',
       image: '/images/amboseli_kibo_lounge.jpg',
-      fallback: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80',
+      fallback: '/images/park_game_drive_binoculars.jpg',
       action: () => onSelectExperience?.('cottage')
     },
     {
@@ -34,7 +34,7 @@ export const SirikoiExperience: React.FC<SirikoiExperienceProps> = ({
       title: 'LUXURY SAFARI TENTS',
       tagline: '4 En-suite tents with private viewing decks',
       image: '/images/bespoke_safari_elephants.jpg',
-      fallback: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80',
+      fallback: '/images/uae_dubai_burj_khalifa.jpg',
       action: () => onSelectExperience?.('tents')
     }
   ];

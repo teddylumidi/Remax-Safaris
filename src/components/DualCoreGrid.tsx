@@ -40,7 +40,7 @@ export const DualCoreGrid: React.FC<DualCoreGridProps> = ({
                 src="/images/bespoke_safari_elephants.jpg"
                 alt="Amboseli wild elephants near Mount Kilimanjaro - Bespoke Kenya Safaris"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                fallbackSrc="https://images.unsplash.com/photo-1581852017103-68ac65514cf7?auto=format&fit=crop&w=1200&q=80"
+                fallbackSrc="/images/bespoke_safari_elephants.jpg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
               
@@ -108,7 +108,7 @@ export const DualCoreGrid: React.FC<DualCoreGridProps> = ({
                 src="/images/global_luxury_travel.jpg"
                 alt="Curated worldwide luxury destinations - Global Travel Consultancy"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                fallbackSrc="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80"
+                fallbackSrc="/images/uae_dubai_burj_khalifa.jpg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
               

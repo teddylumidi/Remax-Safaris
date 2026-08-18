@@ -81,7 +81,7 @@ const JOURNEYS: JourneyItem[] = [
     location: 'Diani Beach & Wasini Island',
     duration: '5 Days / 4 Nights',
     priceUsd: 720,
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/diani_white_sand_beach.jpg',
     description: 'Pristine powdery white sands, private beachfront villas, private dhow dolphin-sighting sailing, and fresh ocean-to-table seafood banquets.',
     highlights: ['Wasini dolphin dhow cruise', 'Kisite Mpunguti coral reef snorkeling', 'Private sunset beach dining']
   },
@@ -171,7 +171,7 @@ const JourneyCardItem: React.FC<JourneyCardItemProps> = ({ item, onOpenQuote }) 
           src={currentImage}
           alt={`${item.title} - ${getImageLabel(activeIdx)}`}
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-          fallbackSrc="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80"
+          fallbackSrc="/images/park_game_drive_binoculars.jpg"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         

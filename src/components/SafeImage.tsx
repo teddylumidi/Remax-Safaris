@@ -8,14 +8,14 @@ interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   fallbackSrc?: string;
 }
 
-// Highly reliable Unsplash fallbacks for travel categories (optimized size and quality)
+// Local image fallbacks for travel categories
 const CATEGORY_FALLBACKS: Record<string, string> = {
-  safari: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=70',
-  kenya: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=70',
-  beach: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70',
-  city: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=70',
-  international: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=70',
-  default: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=70'
+  safari: '/images/park_game_drive_binoculars.jpg',
+  kenya: '/images/park_game_drive_binoculars.jpg',
+  beach: '/images/diani_white_sand_beach.jpg',
+  city: '/images/uae_dubai_burj_khalifa.jpg',
+  international: '/images/uae_dubai_burj_khalifa.jpg',
+  default: '/images/safari_sunset_horizon.jpg'
 };
 
 // SVG placeholder generator as bulletproof offline fallback

@@ -16,7 +16,7 @@ export const SirikoiAwaits: React.FC<SirikoiAwaitsProps> = ({
       title: 'SAFARI ADVENTURES',
       desc: 'Sunset game drives, hot air balloon flights, and tracked predator encounters in Maasai Mara.',
       image: '/images/park_safari_cruiser_wildlife.jpg',
-      fallback: 'https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=800&q=80',
+      fallback: '/images/safari_landscape_expanse.jpg',
       action: () => onSelectCard?.('safari')
     },
     {
@@ -24,7 +24,7 @@ export const SirikoiAwaits: React.FC<SirikoiAwaitsProps> = ({
       title: 'WILDLIFE ENCOUNTERS',
       desc: 'Front-row seats to the Great Migration, Amboseli elephant herds, and endangered black rhinos.',
       image: '/images/bespoke_safari_elephants.jpg',
-      fallback: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80',
+      fallback: '/images/bespoke_safari_elephants.jpg',
       action: () => onSelectCard?.('wildlife')
     },
     {
@@ -32,7 +32,7 @@ export const SirikoiAwaits: React.FC<SirikoiAwaitsProps> = ({
       title: 'CULTURAL EXPERIENCES',
       desc: 'Traditional Maasai and Samburu warrior village heritage tours and local artisan workshops.',
       image: '/images/safari_warrior_heritage.jpg',
-      fallback: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80',
+      fallback: '/images/samburu_giraffe_reserve.jpg',
       action: () => onSelectCard?.('culture')
     },
     {
@@ -40,7 +40,7 @@ export const SirikoiAwaits: React.FC<SirikoiAwaitsProps> = ({
       title: 'CONSERVATION IN ACTION',
       desc: 'Supporting Lewa & Ol Pejeta rhino sanctuaries, anti-poaching units, and community health.',
       image: '/images/park_game_drive_binoculars.jpg',
-      fallback: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80',
+      fallback: '/images/nanyuki_mount_kenya_equator.jpg',
       action: () => onSelectCard?.('conservation')
     },
     {
@@ -48,7 +48,7 @@ export const SirikoiAwaits: React.FC<SirikoiAwaitsProps> = ({
       title: 'FARM-TO-TABLE DINING',
       desc: 'Organic garden dining, candlelit bush breakfasts, and scenic sundowners under acacia trees.',
       image: '/images/amboseli_kibo_lounge.jpg',
-      fallback: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80',
+      fallback: '/images/lamu_old_town_swahili.jpg',
       action: () => onSelectCard?.('dining')
     },
     {
@@ -56,7 +56,7 @@ export const SirikoiAwaits: React.FC<SirikoiAwaitsProps> = ({
       title: 'RELAX AND UNWIND',
       desc: 'Infinity pools overlooking natural watering holes, bush spa wellness, and private retreats.',
       image: '/images/kisumu_lake_victoria_sunset.jpg',
-      fallback: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
+      fallback: '/images/diani_white_sand_beach.jpg',
       action: () => onSelectCard?.('relax')
     }
   ];

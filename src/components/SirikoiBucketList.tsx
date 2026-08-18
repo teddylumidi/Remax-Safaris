@@ -14,7 +14,7 @@ export const SirikoiBucketList: React.FC<SirikoiBucketListProps> = ({ onEnquireN
           src="/images/safari_sunset_horizon.jpg"
           alt="Add Remax Safaris to your bucket list"
           className="w-full h-full object-cover object-center scale-105"
-          fallbackSrc="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1600&q=80"
+          fallbackSrc="/images/safari_landscape_expanse.jpg"
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>

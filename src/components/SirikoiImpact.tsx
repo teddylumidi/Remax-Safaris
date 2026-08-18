@@ -21,7 +21,7 @@ export const SirikoiImpact: React.FC<SirikoiImpactProps> = ({
               src="/images/safari_landscape_expanse.jpg"
               alt="Truly Exceptional Safari Location"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-              fallbackSrc="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80"
+              fallbackSrc="/images/safari_landscape_expanse.jpg"
             />
           </div>
 
@@ -53,7 +53,7 @@ export const SirikoiImpact: React.FC<SirikoiImpactProps> = ({
               src="/images/safari_warrior_heritage.jpg"
               alt="Our Impact & Community Conservation"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-              fallbackSrc="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80"
+              fallbackSrc="/images/samburu_giraffe_reserve.jpg"
             />
           </div>
 
