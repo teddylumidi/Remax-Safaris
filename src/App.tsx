@@ -24,7 +24,6 @@ import { Footer } from './components/Footer';
 const DestinationDetailModal = lazy(() => import('./components/DestinationDetailModal').then(m => ({ default: m.DestinationDetailModal })));
 const PackageDetailModal = lazy(() => import('./components/PackageDetailModal').then(m => ({ default: m.PackageDetailModal })));
 const PhotoGallerySection = lazy(() => import('./components/PhotoGallerySection').then(m => ({ default: m.PhotoGallerySection })));
-const VideoReelsSection = lazy(() => import('./components/VideoReelsSection').then(m => ({ default: m.VideoReelsSection })));
 const FaqSection = lazy(() => import('./components/FaqSection').then(m => ({ default: m.FaqSection })));
 const CustomQuoteBuilder = lazy(() => import('./components/CustomQuoteBuilder').then(m => ({ default: m.CustomQuoteBuilder })));
 
@@ -166,7 +165,6 @@ function MainAppContent() {
 
         <Suspense fallback={null}>
           {/* Guest Video Reels Showcase */}
-          <VideoReelsSection />
 
           {/* Interactive Media & Destination Photo Gallery */}
           <PhotoGallerySection />
