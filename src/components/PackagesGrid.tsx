@@ -29,7 +29,7 @@ const PackageCardItem: React.FC<PackageCardItemProps> = ({ pkg, onSelectPackage 
 
   const getImageLabel = (index: number) => {
     if (pkg.id.includes('cape-town') || pkg.destinationId === 'cape-town') {
-      return index === 0 ? 'Table Mountain' : 'Summit View';
+      return index === 0 ? 'Table Mountain' : 'Camps Bay';
     }
     if (pkg.id.includes('zanzibar') || pkg.destinationId === 'zanzibar') {
       if (index === 0) return 'Turtle Swimming';
