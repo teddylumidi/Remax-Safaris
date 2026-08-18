@@ -193,7 +193,7 @@ export const DESTINATIONS: Destination[] = [
     galleryImages: [
       '/images/park_safari_cruiser_wildlife.jpg',
       '/images/park_game_drive_binoculars.jpg',
-      '/images/safari_warrior_heritage.jpg'
+      '/images/nairobi_np_skyline_wildlife.jpg'
     ],
     highlights: ['4x4 Pop-Up Roof Game Drive', 'Binocular Safari Spotting', 'David Sheldrick Elephant Sanctuary', 'Giraffe Centre Encounter'],
     bestTimeToVisit: 'All year round',
@@ -269,11 +269,11 @@ export const DESTINATIONS: Destination[] = [
     experienceType: 'Nature',
     tagline: 'Savannah gateways, quad biking & weekend country escapes',
     description: 'Located at the edge of the Kapiti Plains, ideal for quick weekend retreats, adventure quad biking, resort getaways, and savannah birdwatching.',
-    image: '/images/safari_sunset_horizon.jpg',
+    image: '/images/athi_river_kapiti_plains.jpg',
     galleryImages: [
-      '/images/safari_sunset_horizon.jpg',
-      '/images/safari_landscape_expanse.jpg',
-      '/images/park_safari_cruiser_wildlife.jpg'
+      '/images/athi_river_kapiti_plains.jpg',
+      '/images/athi_river_quad_biking.jpg',
+      '/images/athi_river_resort_savannah.jpg'
     ],
     highlights: ['Savannah Sunset Spots', 'Adventure Quad Biking Trails', 'Resort Swimming & Dining', 'Proximity to Nairobi'],
     bestTimeToVisit: 'All year round',
@@ -292,8 +292,8 @@ export const DESTINATIONS: Destination[] = [
     image: '/images/machakos_lukenya_hills.jpg',
     galleryImages: [
       '/images/machakos_lukenya_hills.jpg',
-      '/images/kajiado_ngong_hills.jpg',
-      '/images/safari_landscape_expanse.jpg'
+      '/images/machakos_iveti_hills.jpg',
+      '/images/kajiado_ngong_hills.jpg'
     ],
     highlights: ["Machakos People's Park", 'Lukenya Hills Rock Climbing', 'Iveti Hills Scenic View', 'Katani Adventure Trails'],
     bestTimeToVisit: 'All year round',
