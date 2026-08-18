@@ -325,10 +325,10 @@ export const DESTINATIONS: Destination[] = [
     experienceType: 'City',
     tagline: 'Table Mountain wonders, Camps Bay coastal views & Stellenbosch vineyards',
     description: 'South Africa’s Mother City where dramatic mountains meet two oceans. Experience Cableway rides up Table Mountain, Camps Bay beaches, Cape Peninsula drives, and penguin encounters.',
-    image: '/images/capetown_table_mountain.jpg',
+    image: '/images/capetown_remax_1.jpg',
     galleryImages: [
-      '/images/capetown_table_mountain.jpg',
-      '/images/capetown_table_mountain_summit.jpg'
+      '/images/capetown_remax_1.jpg',
+      '/images/capetown_remax_2.jpg'
     ],
     highlights: ['Table Mountain Aerial Cableway & Summit View', 'Camps Bay & Twelve Apostles Coastline', 'Boulders Beach African Penguins'],
     bestTimeToVisit: 'November to March',
@@ -494,9 +494,9 @@ export const DESTINATIONS: Destination[] = [
     experienceType: 'Beach',
     tagline: 'Nungwi sea turtle swimming, Stone Town heritage & pristine Kendwa beaches',
     description: 'An enchanted tropical island off Tanzania’s coast. Swim up-close with green sea turtles in Nungwi Baraka Natural Aquarium, sail traditional wooden dhows over clear turquoise waters, tour organic spice farms, and wander historic Stone Town alleys.',
-    image: '/images/zanzibar_turtle_sanctuary.jpg',
+    image: '/images/zanzibar_turtle_swimming.jpg',
     galleryImages: [
-      '/images/zanzibar_turtle_sanctuary.jpg',
+      '/images/zanzibar_turtle_swimming.jpg',
       'https://images.unsplash.com/photo-1595872089523-69b6a9082a9e?auto=format&fit=crop&w=800&q=70',
       'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=70'
     ],

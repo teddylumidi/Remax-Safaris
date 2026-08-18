@@ -32,7 +32,7 @@ const PackageCardItem: React.FC<PackageCardItemProps> = ({ pkg, onSelectPackage 
       return index === 0 ? 'Table Mountain' : 'Summit View';
     }
     if (pkg.id.includes('zanzibar') || pkg.destinationId === 'zanzibar') {
-      if (index === 0) return 'Nungwi Turtles';
+      if (index === 0) return 'Turtle Swimming';
       if (index === 1) return 'Stone Town';
       return 'Kendwa Beach';
     }

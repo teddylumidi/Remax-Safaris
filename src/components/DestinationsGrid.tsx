@@ -49,7 +49,7 @@ const DestinationCardItem: React.FC<DestinationCardItemProps> = ({ dest, onSelec
       return "Hell's Gate";
     }
     if (dest.id === 'zanzibar') {
-      if (index === 0) return 'Nungwi Turtles';
+      if (index === 0) return 'Turtle Swimming';
       if (index === 1) return 'Stone Town';
       return 'Kendwa Beach';
     }

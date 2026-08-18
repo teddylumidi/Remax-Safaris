@@ -321,9 +321,9 @@ export const TOUR_PACKAGES: TourPackage[] = [
     priceKES: 68000,
     priceUSD: 520,
     badge: 'Island & Turtle Sanctuary',
-    image: '/images/zanzibar_turtle_sanctuary.jpg',
+    image: '/images/zanzibar_turtle_swimming.jpg',
     galleryImages: [
-      '/images/zanzibar_turtle_sanctuary.jpg',
+      '/images/zanzibar_turtle_swimming.jpg',
       'https://images.unsplash.com/photo-1595872089523-69b6a9082a9e?auto=format&fit=crop&w=800&q=70',
       'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=800&q=70'
     ],
@@ -374,10 +374,10 @@ export const TOUR_PACKAGES: TourPackage[] = [
     priceKES: 145000,
     priceUSD: 1100,
     badge: 'African Jewel',
-    image: '/images/capetown_table_mountain.jpg',
+    image: '/images/capetown_remax_1.jpg',
     galleryImages: [
-      '/images/capetown_table_mountain.jpg',
-      '/images/capetown_table_mountain_summit.jpg'
+      '/images/capetown_remax_1.jpg',
+      '/images/capetown_remax_2.jpg'
     ],
     inclusions: [
       '4 Nights accommodation in 4-star Cape Town seafront hotel',
