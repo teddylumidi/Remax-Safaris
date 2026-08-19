@@ -23,7 +23,7 @@ export const TRAVEL_SERVICES: TravelService[] = [
     shortDesc: 'Comprehensive visa processing for Dubai, Schengen, US, UK, Canada, Turkey, China, Asia & Africa.',
     fullDesc: 'Get expert visa consultation for tourist, business, student, and family visits worldwide. Our team assists with document preparation, bank statement formatting, flight reservation vouchers, hotel booking confirmations, cover letters, and appointment scheduling for embassies across Nairobi.',
     features: [
-      'Dubai 30-day & 60-day Express E-Visas (24-48 hr processing)',
+      'Dubai 30-day & 60-day Express E-Visas (24 hours to 7 days processing)',
       'Schengen Area (France, Italy, Germany, Spain) file preparation',
       'US & UK Visa application & DS-160 appointment booking',
       'Turkey, China, Singapore, Bali & Egypt E-Visa applications',

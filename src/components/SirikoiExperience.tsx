@@ -34,7 +34,7 @@ export const SirikoiExperience: React.FC<SirikoiExperienceProps> = ({
       title: 'LUXURY SAFARI TENTS',
       tagline: '4 En-suite tents with private viewing decks',
       image: '/images/bespoke_safari_elephants.jpg',
-      fallback: '/images/uae_dubai_burj_khalifa.jpg',
+      fallback: '/images/park_game_drive_binoculars.jpg',
       action: () => onSelectExperience?.('tents')
     }
   ];
