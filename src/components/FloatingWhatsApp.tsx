@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PHONE_NUMBER_DISPLAY, COMPANY_EMAIL, getWhatsAppLink } from '../utils/whatsapp';
+import { PHONE_NUMBER_DISPLAY, getWhatsAppLink } from '../utils/whatsapp';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { X, Send, Compass, ShieldCheck, Phone, Mail } from 'lucide-react';
 
@@ -72,11 +72,12 @@ export const FloatingWhatsApp: React.FC = () => {
             </a>
 
             <a
-              href={`mailto:${COMPANY_EMAIL}`}
+              href="#contact-form"
               className="text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 flex items-center gap-1"
+              onClick={() => setIsOpen(false)}
             >
               <Mail className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>Email Us</span>
+              <span>Contact us</span>
             </a>
 
             <a

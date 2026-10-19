@@ -1,6 +1,6 @@
 import React from 'react';
 import { TRAVEL_SERVICES } from '../data/services';
-import { getWhatsAppLink, COMPANY_EMAIL } from '../utils/whatsapp';
+import { getWhatsAppLink } from '../utils/whatsapp';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { FileText, Globe, Plane, Hotel, Compass, Car, CheckCircle, ArrowRight, ShieldCheck, Mail } from 'lucide-react';
 
@@ -103,17 +103,17 @@ export const ServicesSection: React.FC = () => {
           <div className="space-y-2 text-center md:text-left">
             <h3 className="text-2xl font-serif font-normal text-white">Need Urgent Visa or Passport Guidance?</h3>
             <p className="text-stone-300 text-xs sm:text-sm max-w-xl font-light leading-relaxed">
-              Our Senior Travel Directors are available directly via WhatsApp at <strong>+254 795 723 450</strong> or via email at <a href={`mailto:${COMPANY_EMAIL}`} className="underline text-[#C88A4B] hover:text-white font-medium">{COMPANY_EMAIL}</a> to verify documents and expedite processing.
+              Our Senior Travel Directors are available directly via WhatsApp at <strong>+254 795 723 450</strong> or through our <a href="#contact-form" className="underline text-[#C88A4B] hover:text-white font-medium">contact form</a> to verify documents and expedite processing.
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-3 shrink-0">
             <a
-              href={`mailto:${COMPANY_EMAIL}`}
+              href="#contact-form"
               className="px-6 py-3.5 bg-black/60 hover:bg-black/90 text-white text-xs uppercase tracking-[0.18em] font-semibold flex items-center gap-2 border border-white/20 transition-all"
             >
               <Mail className="w-4 h-4 text-[#C88A4B]" />
-              <span>{COMPANY_EMAIL}</span>
+              <span>Contact us</span>
             </a>
 
             <a

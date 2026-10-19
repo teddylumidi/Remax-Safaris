@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Logo } from './Logo';
-import { PHONE_NUMBER_DISPLAY, COMPANY_EMAIL, getWhatsAppLink } from '../utils/whatsapp';
+import { PHONE_NUMBER_DISPLAY, getWhatsAppLink } from '../utils/whatsapp';
 import { CurrencySelector } from './CurrencySelector';
 import { LanguageSelector } from './LanguageSelector';
 import { ThemeToggle } from './ThemeToggle';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { TikTokIcon } from './TikTokIcon';
-import { Search, X, Instagram, Facebook, Youtube, Phone, Mail } from 'lucide-react';
+import { Search, X, Instagram, Facebook, Youtube, Phone } from 'lucide-react';
 
 interface NavbarProps {
   onOpenQuoteBuilder: () => void;
@@ -427,7 +427,9 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="flex items-center gap-4">
               <span>{PHONE_NUMBER_DISPLAY}</span>
               <span>•</span>
-              <span>{COMPANY_EMAIL}</span>
+              <a href="#contact-form" onClick={() => setOverlayOpen(false)} className="hover:text-[#C88A4B] transition-colors">
+                Contact us
+              </a>
             </div>
             <p>© {new Date().getFullYear()} Remax Safaris Kenya.</p>
           </div>

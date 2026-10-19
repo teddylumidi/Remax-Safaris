@@ -15,6 +15,7 @@ import { SirikoiBucketList } from './components/SirikoiBucketList';
 import { DestinationsGrid } from './components/DestinationsGrid';
 import { PackagesGrid } from './components/PackagesGrid';
 import { ServicesSection } from './components/ServicesSection';
+import { ContactForm } from './components/ContactForm';
 import { UaeCitiesModal } from './components/UaeCitiesModal';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -178,6 +179,7 @@ function MainAppContent() {
             initialService={quoteService}
           />
         </Suspense>
+        <ContactForm />
       </main>
 
       {/* Page 7 Flow: Refined Sirikoi-Style Luxury Footer */}

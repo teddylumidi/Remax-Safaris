@@ -1,6 +1,5 @@
 export const PHONE_NUMBER_DISPLAY = '0795 723 450';
 export const PHONE_NUMBER_INT = '254795723450';
-export const COMPANY_EMAIL = 'info@remaxsafaris.com';
 export const WHATSAPP_BASE_URL = `https://wa.me/${PHONE_NUMBER_INT}`;
 
 export function getWhatsAppLink(customMessage?: string): string {

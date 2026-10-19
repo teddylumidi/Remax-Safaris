@@ -3,7 +3,12 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/*"
+    from = "/api/contact"
+    to = "/.netlify/functions/contact"
+    status = 200
+
+  [[redirects]]
+    from = "/*"
   to = "/index.html"
   status = 200
 
@@ -28,4 +33,3 @@
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
-

@@ -1,8 +1,14 @@
+import 'dotenv/config';
 import express from 'express';
 import compression from 'compression';
 import path from 'path';
 import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
+import {
+  ContactEmailConfigurationError,
+  deliverContactEmail,
+  parseContactSubmission
+} from './contactEmail';
 
 const app = express();
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 5000;
@@ -26,11 +32,33 @@ app.use(
   })
 );
 
-app.use(express.json());
+app.use(express.json({ limit: '20kb' }));
 
 // Health check route
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', service: 'Remax Safaris' });
+});
+
+app.post('/api/contact', async (req, res) => {
+  const submission = parseContactSubmission(req.body);
+  if (!submission) {
+    return res.status(400).json({ error: 'Please check your enquiry details and try again.' });
+  }
+
+  try {
+    await deliverContactEmail(submission);
+    return res.json({ ok: true });
+  } catch (error) {
+    if (error instanceof ContactEmailConfigurationError) {
+      console.error('Contact email delivery is unavailable:', error.message);
+      return res.status(503).json({ error: 'Email delivery is temporarily unavailable. Please try again later or contact us by WhatsApp.' });
+    }
+    console.error(
+      'Contact email delivery failed:',
+      error instanceof Error ? error.message : 'Unknown SMTP error'
+    );
+    return res.status(502).json({ error: 'We could not send your enquiry right now. Please try again or contact us by WhatsApp.' });
+  }
 });
 
 // Dedicated fast streaming route for videos with Range request support and optimized caching
@@ -108,4 +136,3 @@ async function startServer() {
 }
 
 startServer();
-

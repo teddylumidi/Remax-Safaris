@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { DESTINATIONS } from '../data/destinations';
 import { formatCustomQuoteInquiry, getWhatsAppLink } from '../utils/whatsapp';
 import { WhatsAppIcon } from './WhatsAppIcon';
-import { Calendar, Users, DollarSign, MapPin, Send, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Calendar, Users, DollarSign, MapPin, Send, CheckCircle2 } from 'lucide-react';
 
 interface CustomQuoteBuilderProps {
   initialDestination?: string;
@@ -23,10 +23,14 @@ export const CustomQuoteBuilder: React.FC<CustomQuoteBuilderProps> = ({
   const [budgetPreference, setBudgetPreference] = useState<'Economy' | 'Mid-Range' | 'Luxury' | 'Ultra-Luxury'>('Mid-Range');
   const [specialRequests, setSpecialRequests] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const [whatsappPopupBlocked, setWhatsappPopupBlocked] = useState(false);
+  const [whatsappFallbackLink, setWhatsappFallbackLink] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const formattedMsg = formatCustomQuoteInquiry({
       destination: selectedDestination,
       travelers: travelersCount,
@@ -39,9 +43,58 @@ export const CustomQuoteBuilder: React.FC<CustomQuoteBuilderProps> = ({
       notes: specialRequests
     });
 
-    setSubmitted(true);
-    // Open WhatsApp in new tab
-    window.open(getWhatsAppLink(formattedMsg), '_blank');
+    const whatsappWindow = window.open('about:blank', '_blank');
+    setIsSubmitting(true);
+    setSubmitError('');
+    setWhatsappPopupBlocked(false);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: customerName,
+          phone: customerPhone,
+          destination: selectedDestination,
+          serviceType,
+          travelers: travelersCount,
+          travelDate: travelDate || 'Flexible / TBD',
+          duration: durationDays,
+          budget: budgetPreference,
+          notes: specialRequests
+        })
+      });
+      const result: unknown = await response.json();
+      const errorMessage =
+        typeof result === 'object' && result !== null && 'error' in result && typeof result.error === 'string'
+          ? result.error
+          : 'We could not send your enquiry. Please try again.';
+
+      if (!response.ok) {
+        throw new Error(errorMessage);
+      }
+
+      setSubmitted(true);
+      if (whatsappWindow) {
+        whatsappWindow.opener = null;
+        whatsappWindow.location.href = getWhatsAppLink(formattedMsg);
+      } else {
+        setWhatsappPopupBlocked(true);
+        setWhatsappFallbackLink(getWhatsAppLink(formattedMsg));
+      }
+    } catch (error) {
+      const whatsappLink = getWhatsAppLink(formattedMsg);
+      setWhatsappFallbackLink(whatsappLink);
+      if (whatsappWindow) {
+        whatsappWindow.opener = null;
+        whatsappWindow.location.href = whatsappLink;
+      } else {
+        setWhatsappPopupBlocked(true);
+      }
+      setSubmitError(error instanceof Error ? error.message : 'We could not send your enquiry. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -62,7 +115,7 @@ export const CustomQuoteBuilder: React.FC<CustomQuoteBuilderProps> = ({
             </h2>
 
             <p className="text-gray-200 text-sm sm:text-base max-w-2xl">
-              Tell us your dream destination, travel dates, group size, and budget preferences. We will generate a customized itinerary and send it directly to WhatsApp (<strong>0795 723 450</strong>).
+              Tell us your dream destination, travel dates, group size, and budget preferences. Your request will be emailed to our team and opened in WhatsApp (<strong>0795 723 450</strong>).
             </p>
           </div>
 
@@ -237,18 +290,36 @@ export const CustomQuoteBuilder: React.FC<CustomQuoteBuilderProps> = ({
             <div className="pt-4">
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full py-4 px-6 rounded-2xl bg-[#25D366] hover:bg-emerald-600 text-white font-black text-xs uppercase tracking-widest shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3"
               >
                 <WhatsAppIcon className="w-5 h-5 text-white" />
-                <span>Send Custom Request to WhatsApp (0795 723 450)</span>
+                <span>{isSubmitting ? 'Sending your request...' : 'Send Request to Email & WhatsApp'}</span>
                 <Send className="w-4 h-4" />
               </button>
               
               {submitted && (
-                <p className="text-xs text-[#1B4332] font-bold text-center mt-3 flex items-center justify-center gap-1">
-                  <CheckCircle2 className="w-4 h-4 text-[#25D366]" />
-                  Opening WhatsApp with your formatted itinerary inquiry!
-                </p>
+                <div className="text-xs text-[#1B4332] font-bold text-center mt-3">
+                  <p className="flex items-center justify-center gap-1">
+                    <CheckCircle2 className="w-4 h-4 text-[#25D366]" />
+                    Your request was emailed to our team.
+                  </p>
+                  {whatsappPopupBlocked && (
+                    <a href={whatsappFallbackLink} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block underline">
+                      Continue to WhatsApp
+                    </a>
+                  )}
+                </div>
+              )}
+              {submitError && (
+                <div className="mt-3 text-center">
+                  <p role="alert" className="text-xs text-red-700">{submitError}</p>
+                  {whatsappPopupBlocked && (
+                    <a href={whatsappFallbackLink} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-xs underline">
+                      Send via WhatsApp instead
+                    </a>
+                  )}
+                </div>
               )}
             </div>
 
