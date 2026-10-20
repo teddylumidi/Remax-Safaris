@@ -148,7 +148,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectDestination, onOpenQuote
                 <li>
                   <a href="#contact-form" className="hover:text-[#C88A4B] transition-colors flex items-center gap-1.5">
                     <Mail className="w-3.5 h-3.5 text-[#C88A4B]" />
-                    <span>Contact us</span>
+                    <span>info@remaxsafaris.com</span>
                   </a>
                 </li>
                 <li>
